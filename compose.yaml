@@ -1,0 +1,45 @@
+services:
+  mailserver:
+    image: ghcr.io/docker-mailserver/docker-mailserver:latest
+    container_name: yourcontainername
+    hostname: example.com
+    env_file: mailserver.env
+    ports:
+      - "25:25"    # SMTP  (explicit TLS => STARTTLS, Authentication is DISABLED => use port 465/587 instead)
+      - "143:143"  # IMAP4 (explicit TLS => STARTTLS)
+      - "465:465"  # ESMTP (implicit TLS)
+      - "587:587"  # ESMTP (explicit TLS => STARTTLS)
+      - "993:993"  # IMAP4 (implicit TLS)
+    volumes:
+      - mailstorage:/var/mail/
+      - mailstate:/var/mail-state/
+      - maillogs:/var/log/mail/
+      - mailconfig:/tmp/docker-mailserver/
+      - mailcerts:/certs
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./10-encryption.conf:/etc/dovecot/conf.d/10-encryption.conf
+      - ./10-fts.conf:/etc/dovecot/conf.d/10-fts.conf
+      - ./dkim_signing.conf:/etc/rspamd/local.d/dkim_signing.conf
+      - ./dkim:/etc/rspamd/dkim
+      - ./fts_xapian:/etc/cron.d/fts_xapian
+      - ./decode2text.sh:/usr/libexec/dovecot/decode2text.sh
+    restart: unless-stopped
+    stop_grace_period: 1m
+#    cap_add:
+#      - NET_ADMIN
+    healthcheck:
+      test: "ss --listening --ipv4 --tcp | grep --silent ':smtp' || exit 1"
+      timeout: 3s
+      retries: 0
+volumes:
+  mailstorage:
+    external: true
+  mailstate:
+    external: true
+  maillogs:
+    external: true
+  mailconfig:
+    external: true
+  mailcerts:
+    external: true
