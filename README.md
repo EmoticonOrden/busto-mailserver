@@ -27,6 +27,7 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 15. Restart your container with `sudo docker-compose up -d`.
 
 **And your mail server is ready to go! Congratulations!**
+
 You can deeply modify this server later, if you want.
 
 ## Known issues
