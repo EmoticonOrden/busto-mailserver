@@ -12,7 +12,7 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 2. Create the volumes described in `compose.yaml` or create volumes with your name and adjust the values ​​in `compose.yaml`.
 3. Clone or download this repository in chosen folder. (or create folder for mailserver)
 4. Replace the following values:
-   * *PLACEHOLDERS* in `compose.yaml` and `mailserver.env`. (for basic server operation)
+   * `*PLACEHOLDERS*` in `compose.yaml` and `mailserver.env`. (for basic server operation)
    * For what suits you in `mailserver.env`. (advanced server configuration)
 5. Make folder "certs" in container folder and in it generate EC keys for encryption module through this command: `openssl ecparam -name prime256v1 -genkey | openssl pkey -out ecprivkey.pem | openssl pkey -in ecprivkey.pem -pubout -out ecpubkey.pem`.
 6. Generate cerificates for secure connections: `sudo certbot --apache/--nginx/--certonly -d example.com`. (replace example.com with your mail domain and use one of preffered options for certificate obtaining)
@@ -28,7 +28,7 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 
 **And your mail server is ready to go! Congratulations!**
 
-You can deeply modify this server later, if you want.
+*You can deeply modify this server later, if you want.*
 
 ## Known issues
 Full-Text Search may not work or may give errors while running. I haven't been able to resolve this yet :(
