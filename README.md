@@ -6,7 +6,8 @@
 3. Clone or download this repository in chosen folder (or create folder for mailserver).
 4. Replace the following values:
    * *PLACEHOLDERS* in `compose.yaml` and `mailserver.env`. (for basic server operation)
-   * For what suits you in `mailserver.env`.
+   * For what suits you in `mailserver.env`. (advanced server configuration)
 5. Make folder "certs" in container folder and in it generate EC keys for encryption module through this command: `openssl ecparam -name prime256v1 -genkey | openssl pkey -out ecprivkey.pem | openssl pkey -in ecprivkey.pem -pubout -out ecpubkey.pem`
 6. Generate cerificates for secure connections: `sudo certbot --apache/--nginx/--certonly -d example.com` (replace example.com with your mail domain and use one of preffered options for certificate obtaining).
-7. 
+7. All set for first deploy, use `sudo docker-compose up -d` for the first run!
+8. 
