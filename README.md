@@ -22,5 +22,6 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 13. Shutdown your container with `sudo docker-compose down`.
 14. Find and modify `example.com` in your `dkim_signing.conf` and replace with your domain.
 15. Restart your container with `sudo docker-compose up -d`.
-**8And your mail server is ready to go!. Congratulations!**
+
+**And your mail server is ready to go!. Congratulations!**
 ## Known issues
