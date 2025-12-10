@@ -4,9 +4,9 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 * Your domain
 * Docker and Docker Compose
 * External IP address, exposed to the Internet
-## What can it do?
-* A low-resource mail server.
-* Your configuration, mailboxes and the letters themselves stores in Docker volumes, you can find this in `/var/lib/docker/volumes` and backup/restore easily!
+## What will you get?
+* A low-resource and scalable mail server.
+* Easy backup and restore functionality through Docker named volumes! (located in `/var/lib/docker/volumes...`)
 ## How to deploy this
 1. Make sure, you're installed Docker and Docker Compose.
 2. Create the volumes described in `compose.yaml` or create volumes with your name and adjust the values ​​in `compose.yaml`.
