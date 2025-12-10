@@ -25,3 +25,4 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 
 **And your mail server is ready to go!. Congratulations!**
 ## Known issues
+Full-Text Search may not work or may give errors while running. I haven't been able to resolve this yet :(
