@@ -21,4 +21,6 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 12. Modify your DNS with next record: `mail._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=...*YOUR_GENERATED_KEY*"` and submit this to your DNS. (replace example.com with your domain)
 13. Shutdown your container with `sudo docker-compose down`.
 14. Find and modify `example.com` in your `dkim_signing.conf` and replace with your domain.
-15. Restart your container with `sudo docker-compose up -d`. And your mail server is ready to go!
+15. Restart your container with `sudo docker-compose up -d`.
+**8And your mail server is ready to go!. Congratulations!**
+## Known issues
