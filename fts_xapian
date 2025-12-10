@@ -1,0 +1,7 @@
+# Adding `MAILTO=""` prevents cron emailing notifications of the task outcome each run
+MAILTO=""
+#
+# m h dom mon dow user command
+#
+# Everyday 4:00AM, optimize index files
+0  4 * * * root  doveadm fts optimize -A
