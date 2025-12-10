@@ -1,5 +1,5 @@
 # Busto Mailserver
-[Created for Docker Mailserver](https://github.com/docker-mailserver/docker-mailserver)
+Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](https://github.com/docker-mailserver/docker-mailserver) 
 ### How to deploy this
 1. Make sure, you're installed Docker and Docker Compose.
 2. Create the volumes described in `compose.yaml` or create volumes with your name and adjust the values ​​in `complose.yaml`.
