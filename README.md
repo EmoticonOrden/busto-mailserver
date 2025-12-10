@@ -9,6 +9,7 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
    * For what suits you in `mailserver.env`. (advanced server configuration)
 5. Make folder "certs" in container folder and in it generate EC keys for encryption module through this command: `openssl ecparam -name prime256v1 -genkey | openssl pkey -out ecprivkey.pem | openssl pkey -in ecprivkey.pem -pubout -out ecpubkey.pem`
 6. Generate cerificates for secure connections: `sudo certbot --apache/--nginx/--certonly -d example.com` (replace example.com with your mail domain and use one of preffered options for certificate obtaining).
-7. All set for first deploy, use `sudo docker-compose up -d` for the first run!
-8. But I think you want emails to reach their senders, right? So now we need to configure the DKIM. For this we need make folder in container for DKIM or mount folder in `compose.yaml` (already mounted, just uncomment and make it in container folder).
-9. 
+7. Make `dkim` folder 
+8. All set for first deploy, use `sudo docker-compose up -d` for the first run!
+9. But I think you want emails to reach their senders, right? So now we need to configure the DKIM. For this we need make folder in container for DKIM or mount folder in `compose.yaml` (already mounted, just uncomment the desired line in `compose.yaml`).
+10. 
