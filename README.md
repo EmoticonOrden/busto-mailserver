@@ -4,7 +4,10 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 * Your domain
 * Docker and Docker Compose
 * External IP address, exposed to the Internet
-### How to deploy this
+## What can it do?
+* A low-resource mail server.
+* Your configuration, mailboxes and the letters themselves stores in Docker volumes, you can find this in `/var/lib/docker/volumes` and backup/restore easily!
+## How to deploy this
 1. Make sure, you're installed Docker and Docker Compose.
 2. Create the volumes described in `compose.yaml` or create volumes with your name and adjust the values ​​in `compose.yaml`.
 3. Clone or download this repository in chosen folder. (or create folder for mailserver)
@@ -23,6 +26,6 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 14. Find and modify `example.com` in your `dkim_signing.conf` and replace with your domain.
 15. Restart your container with `sudo docker-compose up -d`.
 
-**And your mail server is ready to go!. Congratulations!**
+**And your mail server is ready to go!. Congratulations!** You can modify this server later,
 ## Known issues
 Full-Text Search may not work or may give errors while running. I haven't been able to resolve this yet :(
