@@ -32,3 +32,6 @@ Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](h
 
 ## Known issues
 Full-Text Search may not work or may give errors while running. I haven't been able to resolve this yet :(
+
+## Contribution
+Wanna contribute to this project? Refer to ![Unified Contribtuion Guide](https://github.com/EmoticonOrden/emoticonorden/blob/main/UNIFIED_CONTRIBUTING.md) and submit a issue+pull request!
