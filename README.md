@@ -1,7 +1,8 @@
 # Busto Mailserver
-Just **ready-to-use** configuration, no more. [Created for Docker Mailserver.](https://github.com/docker-mailserver/docker-mailserver) 
+**Ready-for-use** mail "image" for faster and multiple deployment. [Created for Docker Mailserver.](https://github.com/docker-mailserver/docker-mailserver) 
 ## What you need?
 * Your domain
+* Linux (better Debian)
 * Docker and Docker Compose
 * External IP address, exposed to the Internet
 ## What will you get?
