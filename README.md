@@ -1,7 +1,7 @@
 # Busto Mailserver
 **Ready-for-use** mail "image" for faster and multiple deployment. [Created for Docker Mailserver.](https://github.com/docker-mailserver/docker-mailserver) 
 
-*By now, i will update "image" in near future for coordination with DMS v16.*
+*By now, I will update "image" in near future for coordination with DMS v16.*
 ## What you need?
 * Your domain
 * Linux (better Debian)
